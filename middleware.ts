@@ -29,7 +29,7 @@ function isCustomDomain(host: string) {
         host?.includes("papermark.io") ||
         host?.includes("papermark.com") ||
         host?.endsWith(".traefik.me") ||
-        host === (process.env.NEXT_PUBLIC_APP_BASE_HOST) ||
+        host === process.env.NEXT_PUBLIC_APP_BASE_HOST ||
         host?.endsWith(".vercel.app")
       ))
   );
