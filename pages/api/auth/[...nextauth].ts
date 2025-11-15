@@ -21,7 +21,7 @@ import { log } from "@/lib/utils";
 import { generateChecksum } from "@/lib/utils/generate-checksum";
 import { getIpAddress } from "@/lib/utils/ip";
 
-const VERCEL_DEPLOYMENT = !!process.env.VERCEL_URL;
+const VERCEL_DEPLOYMENT = (!!process.env.VERCEL_URL || !!process.env.NEXT_PUBLIC_APP_BASE_HOST);
 
 function getMainDomainUrl(): string {
   if (process.env.NODE_ENV === "development") {
