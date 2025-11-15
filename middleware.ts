@@ -20,6 +20,7 @@ function isAnalyticsPath(path: string) {
 }
 
 function isCustomDomain(host: string) {
+  console.log("host", host);
   return (
     (process.env.NODE_ENV === "development" &&
       (host?.includes(".local") || host?.includes("papermark.dev"))) ||
@@ -29,7 +30,7 @@ function isCustomDomain(host: string) {
         host?.includes("papermark.io") ||
         host?.includes("papermark.com") ||
         host?.endsWith(".traefik.me") ||
-        host === process.env.NEXT_PUBLIC_APP_BASE_HOST ||
+        host?.endsWith(".kairic.com") ||
         host?.endsWith(".vercel.app")
       ))
   );
