@@ -19,7 +19,7 @@ export default async function handle(
   if (req.method === "GET") {
     const { domain } = req.query as { domain: string };
 
-    if domain.includes("dataroom.kairic.com") {
+    if (domain.includes("dataroom.kairic.com")) {
       return res.status(200).json({
         status: "Valid Configuration",
         response: { domainJson: { verified: true }, configJson: { conflicts: [] } },
